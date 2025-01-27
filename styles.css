@@ -18,6 +18,10 @@ img {
   margin-top: 20px;
 }
 
+a {
+  border: 1px solid goldenrod !important;
+}
+
 .animation-container {
   background: black;
   position: fixed;
