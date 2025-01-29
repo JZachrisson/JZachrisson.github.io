@@ -29,169 +29,151 @@ a {
   width: 100%;
 }
 
-.shape1 {
+/* Optimized Animated Shapes */
+.shape1,
+.shape2,
+.shape3,
+.shape4,
+.shape5,
+.shape6 {
   position: absolute;
+  will-change: transform, filter;
+  filter: blur(4rem);
+  /* Lower blur for better performance */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Shape 1 */
+.shape1 {
   top: 42%;
   left: 70%;
   width: 25rem;
   height: 25rem;
   background: #7a0060;
   border-radius: 24% 76% 77% 23% / 30% 30% 70% 70%;
-  filter: blur(6rem);
-  animation: shape1 20s infinite;
+  animation: shape1 20s ease-in-out infinite;
 }
 
 @keyframes shape1 {
-  0% {
-    transform: translate(0, 0);
-    border-radius: 24% 76% 77% 23% / 30% 30% 70% 70%;
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
   }
   25% {
-    transform: translate(-55%, -10%);
-    border-radius: 28% 72% 81% 19% / 78% 25% 75% 22%;
-    height: 50rem;
-    width: 80rem;
+    transform: translate(-55%, -10%) scale(1.5);
   }
   50% {
-    transform: translate(-90%, -10%);
-    border-radius: 60% 40% 0% 100% / 1% 74% 26% 99%;
+    transform: translate(-90%, -10%) scale(1.8);
   }
   75% {
-    transform: translate(-30%, -10%);
-    border-radius: 0% 100% 100% 0% / 0% 100% 100% 0%;
-    height: 30rem;
-    width: 45rem;
-  }
-  100% {
-    transform: translate(0%, 0%);
-    border-radius: 24% 76% 77% 23% / 30% 30% 70% 70%;
+    transform: translate(-30%, -10%) scale(1.3);
   }
 }
 
+/* Shape 2 */
 .shape2 {
-  position: absolute;
   top: 33%;
   left: 40%;
   width: 35rem;
   height: 25rem;
   background: #5AB0FF;
   border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
-  filter: blur(12rem);
-  animation: shape2 35s infinite;
+  animation: shape2 35s ease-in-out infinite;
 }
 
 @keyframes shape2 {
-  0% {
-    transform: translate(0, 0);
-    border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
   }
   25% {
-    transform: translate(-55%, -55%);
-    border-radius: 28% 72% 81% 19% / 78% 25% 75% 22%;
-    height: 50rem;
-    width: 50rem;
+    transform: translate(-55%, -55%) scale(1.5);
   }
   50% {
-    transform: translate(-70%, -70%);
-    border-radius: 60% 40% 0% 100% / 1% 74% 26% 99%;
+    transform: translate(-70%, -70%) scale(1.8);
   }
   75% {
-    transform: translate(-30%, -30%);
-    border-radius: 0% 100% 100% 0% / 0% 100% 100% 0%;
-  }
-  100% {
-    transform: translate(0%, 0%);
-    border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
+    transform: translate(-30%, -30%) scale(1.3);
   }
 }
 
+/* Shape 3 */
 .shape3 {
-  position: absolute;
   top: 20%;
   left: 80%;
   width: 25rem;
   height: 25rem;
   background: #3e0065;
   border-radius: 70% 30% 80% 20% / 42% 25% 75% 58%;
-  filter: blur(14rem);
-  animation: shape3 35s infinite;
+  animation: shape3 35s ease-in-out infinite;
 }
 
 @keyframes shape3 {
-  0% {
-    transform: translate(0, 0);
-    border-radius: 70% 30% 80% 20% / 42% 25% 75% 58%;
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
   }
   25% {
-    transform: translate(-125%, -25%);
-    border-radius: 28% 72% 81% 19% / 78% 25% 75% 22%;
-    height: 50rem;
-    width: 50rem;
+    transform: translate(-125%, -25%) scale(1.5);
   }
   50% {
-    transform: translate(-90%, -35%);
-    border-radius: 60% 40% 0% 100% / 1% 74% 26% 99%;
+    transform: translate(-90%, -35%) scale(1.8);
   }
   75% {
-    transform: translate(-30%, -40%);
-    border-radius: 0% 100% 100% 0% / 0% 100% 100% 0%;
-  }
-  100% {
-    transform: translate(0%, 0%);
-    border-radius: 70% 30% 80% 20% / 42% 25% 75% 58%;
+    transform: translate(-30%, -40%) scale(1.3);
   }
 }
 
+/* Additional Shapes (Reusing Optimized Animations) */
 .shape4 {
-  position: absolute;
   top: 42%;
   left: 70%;
   width: 25rem;
   height: 25rem;
   background: #3e0065;
-  border-radius: 24% 76% 77% 23% / 30% 30% 70% 70%;
-  filter: blur(5rem);
-  animation: shape1 20s infinite;
+  animation: shape1 20s ease-in-out infinite;
 }
 
 .shape5 {
-  position: absolute;
   top: 33%;
   left: 40%;
   width: 35rem;
   height: 25rem;
   background: #16001E;
-  border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
-  filter: blur(5rem);
-  animation: shape2 15s infinite;
+  animation: shape2 15s ease-in-out infinite;
 }
 
 .shape6 {
-  position: absolute;
   top: 20%;
   left: 80%;
   width: 25rem;
   height: 25rem;
   background: #41006a;
-  border-radius: 70% 30% 80% 20% / 42% 25% 75% 58%;
-  filter: blur(5rem);
-  animation: shape3 30s infinite;
+  animation: shape3 30s ease-in-out infinite;
 }
 
-/* Default styles (desktop-first approach) already exist above */
-
-/* Tablet screens (768px and below) */
-@media (max-width: 768px) {
-  img {
-    width: 300px;
-    /* Resize the image for tablets */
+/* Reduce motion for low-power devices */
+@media (prefers-reduced-motion: reduce) {
+  .shape1,
+  .shape2,
+  .shape3,
+  .shape4,
+  .shape5,
+  .shape6 {
+    animation: none;
   }
 }
 
-/* Mobile screens (480px and below) */
+/* Responsive Design */
+@media (max-width: 768px) {
+  img {
+    width: 300px;
+  }
+}
+
 @media (max-width: 480px) {
   img {
     width: 300px;
-    /* Resize the image further for mobile */
   }
 }
