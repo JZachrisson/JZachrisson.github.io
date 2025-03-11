@@ -153,6 +153,20 @@ a {
   animation: shape3 30s ease-in-out infinite;
 }
 
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
 /* Reduce motion for low-power devices */
 @media (prefers-reduced-motion: reduce) {
   .shape1,
